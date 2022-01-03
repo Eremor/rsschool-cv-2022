@@ -11,8 +11,8 @@
   <div class="wrapper">
     <div class="column-2">
       <header class="header">
-        <img src="./assets/img/photo.jpg" alt="Artem Smirnov" width="190px" height="190px">
-        <section class="contacts">
+        <img src="./assets/img/photo.jpg" alt="Artem Smirnov" width="190" height="190">
+        <div class="contacts">
           <ul class="contacts__list">
             <li class="contacts__item">
               <b class="contacts__subtitle">Location</b>
@@ -35,7 +35,7 @@
               <a class="contacts__link" href="https://github.com/Eremor" target="_blank">Eremor</a>
             </li>
           </ul>
-        </section>
+        </div>
         <section class="skills">
           <h2 class="title title--center">Skills</h2>
           <ul class="skills__list">
@@ -55,9 +55,9 @@
       <main class="main">
         <h1 class="main__title">Artem Smirnov</h1>
         <h2 class="main__subtitle">Junior Frontend Developer</h2>
-        <section class="summary">
+        <div class="summary">
           <p class="summary__text">My main goal is to change professional activities. At the moment, I work as a systems engineer and I understand that I have come to the point where I do not have enough current work intellectually, therefore, I began to actively study programming. For these purposes, I try to allocate as much time as possible and “absorb” the information with great zeal.</p>
-        </section>
+        </div>
         <section class="experience">
           <h2 class="title">Experience</h2>
           <ul class="experience__list">
@@ -110,29 +110,27 @@
         </section>
         <section class="code">
           <h2 class="title">Code examples</h2>
-          <code>
-            <pre>
-              export class GameField extends BaseComponent {
-                private cards: Card[] = [];
-              
-                constructor() {
-                  super('div', ['game__field']);
-                }
-              
-                public clear(): void {
-                  this.cards = [];
-                }
-              
-                public addCards(cards: Card[]): void {
-                  this.cards = cards;
-                  this.cards.forEach((card): void => this.addChildren([card.node]));
-                  setTimeout(() => {
-                    this.cards.forEach((card) => card.flipToBack());
-                  }, SHOW_TIME * 1000);
-                }
+          <pre>
+            export class GameField extends BaseComponent {
+              private cards: Card[] = [];
+            
+              constructor() {
+                super('div', ['game__field']);
               }
-            </pre>
-          </code>
+            
+              public clear(): void {
+                this.cards = [];
+              }
+            
+              public addCards(cards: Card[]): void {
+                this.cards = cards;
+                this.cards.forEach((card): void => this.addChildren([card.node]));
+                setTimeout(() => {
+                  this.cards.forEach((card) => card.flipToBack());
+                }, SHOW_TIME * 1000);
+              }
+            }
+          </pre>
         </section>
       </main>
     </div>
