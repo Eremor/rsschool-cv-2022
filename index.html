@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My CV</title>
+  <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,7 +15,7 @@
     </header>
     <main class="main">
       <aside class="aside">
-        <img src="./assets/img/photo.jpg" alt="Artem Smirnov" width="190" height="190">
+        <img class="avatar" src="./assets/img/photo.jpg" alt="Artem Smirnov" width="190" height="190">
         <div class="contacts">
           <ul class="contacts__list">
             <li class="contacts__item">
@@ -56,35 +57,35 @@
         </section>
       </aside>
       <div class="content">
-        <h2 class="content__title">Artem Smirnov</h2>
         <div class="summary">
+          <h2 class="summary__title">Artem Smirnov</h2>
           <p class="summary__text">My main goal is to change professional activities. At the moment, I work as a systems engineer and I understand that I have come to the point where I do not have enough current work intellectually, therefore, I began to actively study programming. For these purposes, I try to allocate as much time as possible and “absorb” the information with great zeal.</p>
         </div>
         <section class="experience">
           <h2 class="title">Experience</h2>
           <ul class="experience__list">
-            <li class="experience__title">
+            <li class="experience__item">
               <img src="./assets/img/piano.png" alt="Piano app" class="experience__image">
               <div class="experience__content">
                 <a href="https://eremor.github.io/virtual-piano/" class="experience__link" target="_blank">View</a>
                 <a href="https://github.com/Eremor/virtual-piano" class="experience__link" target="_blank">Code</a>
               </div>
             </li>
-            <li class="experience__title">
+            <li class="experience__item">
               <img src="./assets/img/filter.png" alt="Photo filter app" class="experience__image">
               <div class="experience__content">
                 <a href="https://eremor.github.io/photo-filter/" class="experience__link" target="_blank">View</a>
                 <a href="https://github.com/Eremor/photo-filter" class="experience__link" target="_blank">Code</a>
               </div>
             </li>
-            <li class="experience__title">
+            <li class="experience__item">
               <img src="./assets/img/online-zoo.png" alt="Online zoo page" class="experience__image">
               <div class="experience__content">
                 <a href="https://eremor.github.io/online-zoo/" class="experience__link" target="_blank">View</a>
                 <a href="https://github.com/Eremor/online-zoo" class="experience__link" target="_blank">Code</a>
               </div>
             </li>
-            <li class="experience__title">
+            <li class="experience__item">
               <img src="./assets/img/react.png" alt="React projects" class="experience__image">
               <div class="experience__content">
                 <a href="https://eremor-english-for-kids.netlify.app/" class="experience__link" target="_blank">View</a>
@@ -113,25 +114,25 @@
         <section class="code">
           <h2 class="title">Code examples</h2>
           <pre>
-            export class GameField extends BaseComponent {
-              private cards: Card[] = [];
-            
-              constructor() {
-                super('div', ['game__field']);
-              }
-            
-              public clear(): void {
-                this.cards = [];
-              }
-            
-              public addCards(cards: Card[]): void {
-                this.cards = cards;
-                this.cards.forEach((card): void => this.addChildren([card.node]));
-                setTimeout(() => {
-                  this.cards.forEach((card) => card.flipToBack());
-                }, SHOW_TIME * 1000);
-              }
-            }
+export class GameField extends BaseComponent {
+  private cards: Card[] = [];
+
+  constructor() {
+    super('div', ['game__field']);
+  }
+
+  public clear(): void {
+    this.cards = [];
+  }
+
+  public addCards(cards: Card[]): void {
+    this.cards = cards;
+    this.cards.forEach((card): void => this.addChildren([card.node]));
+    setTimeout(() => {
+      this.cards.forEach((card) => card.flipToBack());
+    }, SHOW_TIME * 1000);
+  }
+}
           </pre>
         </section>
       </div>
