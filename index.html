@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My CV</title>
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <h1 class="header__title">Junior Frontend Developer</h1>
+    </header>
+    <main class="main">
+      <aside class="aside">
+        <img class="avatar" src="./assets/img/photo.jpg" alt="Artem Smirnov" width="250" height="250">
+        <div class="contacts">
+          <ul class="contacts__list">
+            <li class="contacts__item">
+              <b class="contacts__subtitle">Location</b>
+              <p class="contacts__text">Kazan, Russia</p>
+            </li>
+            <li class="contacts__item">
+              <b class="contacts__subtitle">Email</b>
+              <a class="contacts__link" href="mailto:eremidz@yahoo.com">eremidz@yahoo.com</a>
+            </li>
+            <li class="contacts__item">
+              <b class="contacts__subtitle">Skype</b>
+              <p class="contacts__text">set..13</p>
+            </li>
+            <li class="contacts__item">
+              <b class="contacts__subtitle">Discord</b>
+              <p class="contacts__text">ArtemS#5304</p>
+            </li>
+            <li class="contacts__item">
+              <b class="contacts__subtitle">GitHub</b>
+              <a class="contacts__link" href="https://github.com/Eremor" target="_blank">Eremor</a>
+            </li>
+          </ul>
+        </div>
+        <section class="skills">
+          <h2 class="title title--center">Skills</h2>
+          <ul class="skills__list">
+            <li class="skills__item">HTML5, CSS3</li>
+            <li class="skills__item">JavaScript, TypeScript</li>
+            <li class="skills__item">React, Redux</li>
+            <li class="skills__item">Preprocessor: SCSS</li>
+            <li class="skills__item">Module bundler: Webpack</li>
+            <li class="skills__item">Figma, Adobe XD</li>
+          </ul>
+        </section>
+        <section class="languages">
+          <h2 class="title title--center">Languages</h2>
+          <p class="languages__item">English - A2</p>
+        </section>
+      </aside>
+      <div class="content">
+        <div class="summary">
+          <h2 class="summary__title">Artem Smirnov</h2>
+          <p class="summary__text">My main goal is to change professional activities. At the moment, I work as a systems engineer and I understand that I have come to the point where I do not have enough current work intellectually, therefore, I began to actively study programming. For these purposes, I try to allocate as much time as possible and “absorb” the information with great zeal.</p>
+        </div>
+        <section class="experience">
+          <h2 class="title">Experience</h2>
+          <ul class="experience__list">
+            <li class="experience__item">
+              <img src="./assets/img/piano.png" alt="Piano app" class="experience__image">
+              <div class="experience__content">
+                <a href="https://eremor.github.io/virtual-piano/" class="experience__link" target="_blank">View</a>
+                <a href="https://github.com/Eremor/virtual-piano" class="experience__link" target="_blank">Code</a>
+              </div>
+            </li>
+            <li class="experience__item">
+              <img src="./assets/img/filter.png" alt="Photo filter app" class="experience__image">
+              <div class="experience__content">
+                <a href="https://eremor.github.io/photo-filter/" class="experience__link" target="_blank">View</a>
+                <a href="https://github.com/Eremor/photo-filter" class="experience__link" target="_blank">Code</a>
+              </div>
+            </li>
+            <li class="experience__item">
+              <img src="./assets/img/online-zoo.png" alt="Online zoo page" class="experience__image">
+              <div class="experience__content">
+                <a href="https://eremor.github.io/online-zoo/" class="experience__link" target="_blank">View</a>
+                <a href="https://github.com/Eremor/online-zoo" class="experience__link" target="_blank">Code</a>
+              </div>
+            </li>
+            <li class="experience__item">
+              <img src="./assets/img/react.png" alt="React projects" class="experience__image">
+              <div class="experience__content">
+                <a href="https://eremor-english-for-kids.netlify.app/" class="experience__link" target="_blank">View</a>
+                <a href="https://github.com/Eremor/react/tree/react-redux" class="experience__link" target="_blank">Code</a>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section class="education">
+          <h2 class="title">Education</h2>
+          <ul class="education__list">
+            <li class="education__item">
+              <span class="education__year">2018</span>
+              <a href="https://www.freecodecamp.org/certification/eremor/responsive-web-design" class="education__link" target="_blank">FreeCodeCamp: Responsive Web Design</a>
+            </li>
+            <li class="education__item">
+              <span class="education__year">2018</span>
+              <a href="https://www.freecodecamp.org/certification/eremor/javascript-algorithms-and-data-structures" class="education__link" target="_blank">FreeCodeCamp: JavaScript Algorithms and Data Structures</a>
+            </li>
+            <li class="education__item">
+              <span class="education__year">2021</span>
+              <a href="https://app.rs.school/certificate/gg9hwt7m" class="education__link" target="_blank">RSSchool: React</a>
+            </li>
+          </ul>
+        </section>
+        <section class="code">
+          <h2 class="title">Code examples</h2>
+          <pre>
+export class GameField extends BaseComponent {
+  private cards: Card[] = [];
+
+  constructor() {
+    super('div', ['game__field']);
+  }
+
+  public clear(): void {
+    this.cards = [];
+  }
+
+  public addCards(cards: Card[]): void {
+    this.cards = cards;
+    this.cards.forEach((card): void => this.addChildren([card.node]));
+    setTimeout(() => {
+      this.cards.forEach((card) => card.flipToBack());
+    }, SHOW_TIME * 1000);
+  }
+}
+          </pre>
+        </section>
+      </div>
+    </main>
+    <footer class="footer">
+      <a href="https://github.com/Eremor" class="footer__github" target="_blank">Eremor</a>
+      <span class="footer__year">2022</span>
+      <a href="https://rs.school/js/" class="footer__course" target="_blank"></a>
+    </footer>
+  </div>
+</body>
+</html>
